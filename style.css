@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+#filterInput {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  background-color: red;
+  color: white;
+  padding: 2px;
+}
+
+li {
+  margin: 8px 0;
+}
