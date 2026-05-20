@@ -3,6 +3,11 @@ const filterInput = document.getElementById("filterInput");
 const articles = document.querySelectorAll("#articles li");
 
 // Step 2 - Store original text
+/**
+ Why?
+   Because once we use innerHTML for highlighting, original content changes.
+   We store original text so we can reset correctly.
+*/
 articles.forEach((article) => {
   article.dataset.originalText = article.textContent;
 });
@@ -28,6 +33,11 @@ filterInput.addEventListener("input", function () {
       article.style.display = "list-item";
 
       // Step 6 — Highlight matched text
+      /**
+       * g → global match
+       * i → case-insensitive
+       * Wraps matched text with highlight span.
+       */
       const regex = new RegExp(`(${searchText})`, "gi");
 
       article.innerHTML = originalText.replace(
